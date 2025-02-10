@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"                                                                                                                                                                                                                                                                                             
+    content="width=device-width, 
+    initial-scale=1.0">
+    <title>JamStream</title>
+    <link  rel="stylesheet" href="styles.css">
+</head>
+<body> 
+
+    <header>
+        <div class="logo">
+            <img src="./images/jammmm.jpeg" alt="JamStream logo" width="100">
+            <h1>JAMSTREAM</h1>
+            <h2><p> Music Blog!</p></h2>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="search for songs...">
+        </div>
+    </header>
+    <main>
+        <div class="background-section">
+        <section id="home">
+            
+            <h2>Welcome to JamStream</h2>
+            <p>your one-stop destination for the latest music,trending entertainment news,
+                and much more!</p>
+        </section>
+        
+        <section id="About">
+             <h2>About Us</h2>
+             <p>JamStream is dedicated to bringing you the latest in music and entertainment.
+                whether you wnat to stream music,read insightful blog post, or star updated wiht 
+                trending artist, we've got you coverd.
+             </p>
+        </section>
+        <section id="Blog">
+              <h2>Lastest posts</h2>
+              <div class="latest-post">
+                <article>
+                    <h3>5 songs to kickstart your day</h3>
+                    <p> A Roundup of the most-streamed artist this year</p>
+                </article>
+              </div>
+        </section>
+        <section id="music">
+            <h2>Trending Msuic</h2>
+            <div class="trending-music">
+                <div class="track">
+                    <p><strong>Song 1</strong> by Artist A</p>
+                </div>
+                <div class="track">
+                    <p><strong>Song 2</strong>by Artist B</p>
+                </div>
+                <div class="track">
+                  <p><strong>Song 3</strong>by Artist 3</p></div>
+                </div>
+            </div>
+             
+        
+            <div id="player">
+               <div id="now-playing">now playing
+        <span id="current-song">No song selected</span></div> 
+            <div class="controls">
+             <button id="play">Play</button>
+             <button id="pause">Pause</button>
+             <button id="next">Next</button>
+             <button id="prev">Previous</button>
+            </div>
+            
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <div class="extra-controls">
+                <button id="shuffle">shuffle</button>
+                <button id="repeat">Repeat</button>
+            </div>
+            <!-- add th audio player here-->
+             <audio id="audio-player">
+                <source src="./audio/Dj-Selex-Best-Of-Olamide-Mixtape-.mp3" 
+                type="audio/mpeg">
+                    your browser does not support the audio element.
+             </audio>
+            </div>
+        
+
+            <div id="playlist-section">
+                <h3>Playlist</h3>
+                <ul id="Playlist">
+                    <li data-src="audio/song1.mp3/">Song 1</li>
+                    <li data-src="audio/song2.mp3">Song 2</li>
+                    <li data-src="audio/song3.mp3">Song 3</li>
+                </ul>
+            </div>
+
+
+            <div dir="download-section">
+                <h3>Download Your Favourite Tracks</h3>
+                <ul>
+                    <li>
+                        <span>Song 1 by Artist Dj selex</span>
+                        <a href="audio/Dj-Selex-Best-Of-Olamide-Mixtape-.mp3">Downlaod Dj-Selex-Best-Of-Olamide-Mixtape-.mp3</a>
+                    </li>
+                    <li>
+                        <span>Song 2 by Artist iniko jericho</span>
+                        <a href="audio/Iniko-Jericho-(BeatzJam.com).mp3">Downlaod Iniko-Jericho-(BeatzJam.com).mp3</a>
+                    </li>
+                    <li>
+                        <span>Song 3 by Artist Omah lay</span>
+                        <a href="audio/Omah-Lay-Bad-Influence.mp3">Download Omah-Lay-Bad-Influence.mp3</a>
+                    </li>
+                </ul>
+            </div>
+        </section> 
+
+
+
+        <section id="Contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Your Email">
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <section id="auth-section">
+            <h2>Login / Sign</h2>
+            <form id="auth-form">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="password" required>
+            <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main> 
+
+    <footer>
+        <p>&copy; 2025 jamstream.All rights reserved.</p>
+        <div class="social-icons">
+            <img src="./images/facebook.jpeg" alt="Facebook" width="50"><a href="https://www.facebook.com/profile.php?id=100075857875720">Facebook</a>
+            <img src="./images/twitter.jpeg" alt="Twitter" width="30"><a href="https://x.com/JamStreamOffice?t=rbsYDtD8us94XKpT0TNT8A&s=09">Twitter</a>
+            <img src="./images/instagram.jpeg" alt="Instagram" width="30"><a href="https://www.Instagram.com/danielezedike123?igsh=MTB2ZWgzanA0ZGVyaA==">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        const playlistitems =
+        document.querySelectorAll('#playlist li');
+
+        playlistitems.forEach((item) => { 
+            items.addEventListener('click',() => {
+    // remove active class from all items
+    playlistitems.forEach((li) => li.classList.remove('active'));
+
+    // add active class to the clicked item
+    item.classList.add('active');
+    // play the selected song
+    const songsrc =
+    item.getAttribute('data-src');
+    const audioplayer =audioplayer
+    document.getElementById('audio-player');
+
+    audioplayer.src = songSrc;
+    audioplayer.play();
+    });
+  });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

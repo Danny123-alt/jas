@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',;
+    line-height: 1.6;
+    background-image: url("./images/background.jpeg");
+    color: white;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Handwriting;
+    padding: 20px;
+    background-image: url("./images/streeeeem.jpeg");
+    color: #e70c42;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+} 
+
+header .logo img {
+    margin-right: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    background: #ca0606;
+    color: #fcfc05;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+header .search-bar {
+    display: flex;
+    gap: 5px;
+}
+
+header .search-bar input {
+    padding: 5px;
+}
+
+header .search-bar button {
+    padding: 5px;
+    background: #f70505;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+#player {
+    margin: 20px 0;
+}
+
+.controls button,
+.extra-controls button {
+    margin: 5px;
+    padding: 10px;
+    background: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+audio-player {
+    margin: 20px auto;
+    padding: 15px;
+    width: 100px;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+audio-player .controls button{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+
+#playlist-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+#playlist-section ul il {
+    margin: 10px;
+}
+
+#download-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+#download-section ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer .social-icon a img {
+    width: 24px;
+    background: #555;
+    margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    header {
+    flex-direction: column;
+    align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #download-section ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .controls button,
+    .extra-controls button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
